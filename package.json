@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "server": "json-server --watch ./api/students.json --middlewares ./api/autoIncrement.js",
+    "server": "json-server --watch ./api/students.json --middlewares ./api/middleware.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
