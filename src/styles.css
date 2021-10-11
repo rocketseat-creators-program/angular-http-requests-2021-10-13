@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(18, 18, 20);
+}
+
+h1, h2, p, a, label, th, td {
+    color: white;
+}
+
+table {
+    text-align: center;
+}
