@@ -1,10 +1,8 @@
 <img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
 
-# Utilizando as boas práticas de Módulo por Funcionalidade e criando seu primeiro CRUD com Angular.
+# Implementando requisições HTTP em sua aplicação Angular com HttpClient, Loader, Toast, Exception Handler e Retry.
 
-Nessa aula desenvolveremos um CRUD simples utilizando as boas práticas de Módulo por funcionalidade. Explicaremos também quais as vantagens de utilizar essa organização de módulos em nossa aplicação e como podemos criar todo o nosso projeto utilizando a CLI do Angular.
-
-Ao final da aula, teremos um WEB APP capaz de executar todas as operações de um CRUD.
+Nessa aula iremos implementar requisições HTTP em nossa aplicação Angular para que seja possível trocar e receber informações de uma API Rest. Além disso, aprenderemos também como mostrar uma tela de carregamento para cada requisição feita, mensagens com Toast, tratamento de erros e retentativas.
 
 ## Funcionalidades
 
@@ -13,6 +11,11 @@ Ao final da aula, teremos um WEB APP capaz de executar todas as operações de u
 - Editar aluno
 - Cadastrar novo aluno
 - Lazy loading
+- HTTP Requests
+    - Exception Handler
+    - Retry Policy
+    - Loader Screen
+    - Toast message
 
 ## Tecnologias
 
@@ -25,7 +28,8 @@ Ao final da aula, teremos um WEB APP capaz de executar todas as operações de u
     - [new](https://angular.io/cli/new)
     - [generate](https://angular.io/cli/generate)
 - [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
-- [Font Awesome](https://fontawesome.com/)
+- [Font Awesome](https://fontawesome.com)
+- [RxJS](https://rxjs.dev/guide/operators#creation-operators)
 
 ## Ambiente, recursos e requisitos necessários
 
@@ -35,8 +39,8 @@ Ao final da aula, teremos um WEB APP capaz de executar todas as operações de u
 - Vontade de aprender :D
 
 ## Comandos utilizados
-- ng new application-name --routing --skip-tests
-- ng generate component|directive|pipe|service|class|module.
+- npm install --save ngx-toastr
+- npm install --save ngx-spinner
 
 ## Testando a aplicação
 - Clone o repositório para a sua máquina
@@ -45,7 +49,11 @@ Ao final da aula, teremos um WEB APP capaz de executar todas as operações de u
     ```
     npm install
     ```
-- Rode a aplicação executando o seguinte comando:
+- Antes de inicializar nossa aplicação, é necessário subir nossa fake API (Back-end server):
+    ```
+    npm run server
+    ```
+- Para rodar a aplicação, execute o comando:
     ```
     npm start
     ```
@@ -53,17 +61,15 @@ Ao final da aula, teremos um WEB APP capaz de executar todas as operações de u
 
 ## Configuração
 
-### Ícones do Font Awesome
-Caso você esteja desenvolvendo sua própria aplicação para estudo, após a instalação do fontawesome ```npm install --save @fortawesome/fontawesome-free```, é necessário realizar o apontamento para os arquivos .css e .js dentro do arquivo **angular.json**.
+### Folha de estilo do Toastr
+Caso você esteja desenvolvendo sua própria aplicação para estudo, após a instalação do ngx-toastr ```npm install --save ngx-toastr```, é necessário realizar o apontamento para os arquivos .css dentro do arquivo **angular.json**.
 ```
 "architect": {
     "build": {
         ...
         "styles": [
-            "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-        ],
-        "scripts": [
-            "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+            "node_modules/ngx-toastr/toastr.css",
+            ...
         ]
     },
     ...
