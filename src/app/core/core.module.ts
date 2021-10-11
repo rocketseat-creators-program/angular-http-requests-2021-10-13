@@ -6,8 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ToastrModule } from 'ngx-toastr';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { MainComponent } from './layout/main/main.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -32,9 +30,7 @@ const toastrConfig = {
     HttpClientModule,
     CommonModule,
     RouterModule,
-    NgbModule,
-    NgxSpinnerModule,
-    ToastrModule.forRoot(toastrConfig)
+    NgbModule
   ],
   exports: [
     MainComponent

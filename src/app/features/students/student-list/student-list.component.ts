@@ -18,15 +18,11 @@ export class StudentListComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    this.studentService.deleteById(id).subscribe(() => {
-      this.loadStudents();
-    });
+    this.studentService.deleteById(id);
   }
 
   private loadStudents() {
-    this.studentService.findAll().subscribe(response => {
-      this.students = response;
-    });
+    this.students = this.studentService.findAll();
   }
 
 }

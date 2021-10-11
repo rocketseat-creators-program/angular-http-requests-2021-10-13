@@ -14,20 +14,18 @@
                 <th>E-mail</th>
                 <th>Age</th>
                 <th>Birthday</th>
-                <th>Created at</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngIf="!students.length">
-                <td colspan="6">No records found</td>
+                <td colspan="5">No records found</td>
             </tr>
             <tr *ngFor="let student of students">
                 <td>{{student.name}}</td>
                 <td>{{student.email}}</td>
                 <td>{{student.birthday | age}}</td>
                 <td>{{student.birthday | date:'dd/MM/yyy'}}</td>
-                <td>{{student.createdAt | date:'dd/MM/yyy'}}</td>
                 <td>
                     <a [routerLink]="['/students', student.id]" class="btn btn-sm btn-outline-warning mx-1">
                         <i class="fa fa-fw fa-pencil-alt"></i>
