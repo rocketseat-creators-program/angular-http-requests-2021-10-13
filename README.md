@@ -4,7 +4,7 @@
 
 Nessa aula iremos implementar requisições HTTP em nossa aplicação Angular para que seja possível trocar e receber informações de uma API Rest. Além disso, aprenderemos também como mostrar uma tela de carregamento para cada requisição feita, mensagens com Toast, tratamento de erros e retentativas.
 
-- [Template utilizado na aula](https://github.com/rocketseat-experts-club/angular-http-requests-2021-10-11/tree/template)
+- [Template utilizado na aula](https://github.com/rocketseat-experts-club/angular-http-requests-2021-10-13/tree/template)
 
 ## Funcionalidades
 
