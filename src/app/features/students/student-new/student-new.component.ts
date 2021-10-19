@@ -21,7 +21,7 @@ export class StudentNewComponent implements OnInit {
   }
 
   onSubmit() {
-    this.studentService.save(this.student).subscribe(response => {
+    this.studentService.save(this.student).subscribe(() => {
       this.router.navigateByUrl("/students");
     });
   }
