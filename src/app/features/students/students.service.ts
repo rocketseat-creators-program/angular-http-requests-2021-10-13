@@ -7,8 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 
 import { Student } from './student';
 import { catchError, delay, finalize, mergeMap, retryWhen, scan } from 'rxjs/operators';
-import { Observable, ObservableInput, throwError } from 'rxjs';
-import { of } from 'rxjs';
+import { Observable, ObservableInput, throwError, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
